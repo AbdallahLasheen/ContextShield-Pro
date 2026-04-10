@@ -1,0 +1,15 @@
+# Environment Variables (IMPORTANT: Contains your API Keys!)
+.env
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE settings
+.vscode/
+.qwen/
+
+# Chat history (Privacy)
+chat_history.json
