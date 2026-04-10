@@ -23,6 +23,28 @@ import json
 
 sys.path.insert(0, os.path.dirname(__file__))
 
+# ======================================================
+# INSERT THE SERVICE MANAGER CODE HERE (Line 28)
+# ======================================================
+import subprocess
+
+def launch_services():
+    if "backend_started" not in st.session_state:
+        # Check if running locally or on cloud
+        st.info("🚀 Starting ContextShield Security Core & Telegram Bot...")
+        try:
+            # Start API
+            subprocess.Popen([sys.executable, "api.py"])
+            # Start Bot
+            subprocess.Popen([sys.executable, "telegram_bot.py"])
+            
+            time.sleep(5) # Wait for Neural Classifier (90.1% model) to load
+            st.session_state["backend_started"] = True
+            st.success("✅ Security Pipeline & Bot are now ONLINE.")
+        except Exception as e:
+            st.error(f"❌ Launch Error: {e}")
+
+launch_services()
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="ContextShield — AI Security Firewall",
