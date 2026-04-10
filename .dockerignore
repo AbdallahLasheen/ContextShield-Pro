@@ -1,0 +1,15 @@
+*.csv
+*.npy
+*.ipynb
+*.png
+*.jpg
+*.jpeg
+
+.git
+venv/
+.venv/
+__pycache__/
+
+app_streamlit_v2.py
+app_streamlit.py
+.streamlit/
