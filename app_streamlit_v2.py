@@ -34,7 +34,7 @@ def launch_services():
         st.info("🚀 Starting ContextShield Security Core & Telegram Bot...")
         try:
             # Start API
-            subprocess.Popen([sys.executable, "api.py"])
+            subprocess.Popen([sys.executable, "-m", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]))
             # Start Bot
             subprocess.Popen([sys.executable, "telegram_bot.py"])
             
