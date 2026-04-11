@@ -3,7 +3,7 @@
 > **Enterprise-Grade AI Prompt Security Platform with Telegram Chat Integration**
 > 
 > **Team:** Abdallah Lasheen · Nourhan Abdelhamid · Remonda Rezq · Noura Adel · Raghad Mohammed
-
+> **🔗 Live Demo:** [https://contextshield-pro.streamlit.app/](https://contextshield-pro.streamlit.app/)
 ---
 
 ## 📋 Table of Contents
